@@ -8,10 +8,10 @@ $help_rt=$_POST['help_rt'];
 $rec_path=$_POST['rec_path'];
 $rec_score=$_POST['rec_score'];
 
-$dbhost='us-cdbr-east-06.cleardb.net';
-$dbuser='be08301fba8c9c';
-$dbpass='aebb772c';
-$db='heroku_fa973accb1ebf54';
+$dbhost='co28d739i4m2sb7j.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+$dbuser='ciqkb98i04oi5mqj';
+$dbpass='yge7sok0jdptl8eh';
+$db='xj2tpr6deo31cluv';
 $con=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
 
 if($con){
