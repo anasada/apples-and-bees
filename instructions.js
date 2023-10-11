@@ -357,18 +357,45 @@ function SUBMIT_UID() {
     $("#lastPage").show();
 }
 
-function documentReady(){
 
-    //  subj = new subjObject(subj_options);
-
+$(document).ready(function() {
+    // subj = new subjObject(subj_options);
+    
     // start instructions
     instr = new instrObject(instr_options);
     instr.start();
 
-    // ask for username over instructions
-    var windBoxInstr = document.getElementById("windowBoxInstr");
-    windBoxInstr.style.display = "block";
-    var nameDisplay = document.getElementById("namingDisplay");
-    nameDisplay.style.display = "block";
-
-};
+	 // ask for username over instructions
+     var windBoxInstr = document.getElementById("windowBoxInstr");
+     windBoxInstr.style.display = "block";
+     var nameDisplay = document.getElementById("namingDisplay");
+     nameDisplay.style.display = "block";
+	
+    $(document).on('submit','#data_container', function(e){
+        e.preventDefault();    // prevent page from refreshing
+        // const form = document.getElementById("data_container")
+        // const formData = new FormData(form);  // grab the data inside the form fields
+        
+		var formData = {
+			username: $("#username").val(),
+		    map_num: $("#map_num").val(),
+		    r_time: $("#r_time").val(),
+			signal: $("#signal").val(),
+			help_rt: $("#help_rt").val(),
+			rec_path: $("#rec_path").val(),
+		    rec_score: $("#rec_score").val()
+		};
+		
+		$.post(
+			$('#data_container').attr('action'),
+			formData,
+			function(result){
+				// do something with the response if needed
+				// $('#result').html(result);
+			}
+		);
+    });
+    // sanity_check_options["subj"] = subj;
+    // trial_options["subj"] = subj;
+	
+});
