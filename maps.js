@@ -1254,6 +1254,8 @@ function postConfirm(){
 			selectedRating = confSelected[i].value; // value of the button that was checked 
 			allRatings[counter] = selectedRating;  // store
 
+			$("#data_container").submit()
+
 			wasFilled = 1; // allowed to continue now
 
 			// After recording selection, reset the form  
