@@ -1,3 +1,6 @@
+// document.write(
+//     unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E")
+//   );
 
 function BLOCK_MOBILE() {
     $("#instrText").html('It seems that you are using a touchscreen device or a phone. Please use a laptop or desktop instead.<br /><br />If you believe you have received this message in error, please contact the experimenter at experimenter@domain.edu<br /><br />Otherwise, please switch to a laptop or a desktop computer for this experiment.');
@@ -374,17 +377,25 @@ $(document).ready(function() {
         // const formData = new FormData(form);  // grab the data inside the form fields
         
 		var formData = {
-			username: $("#username").val(),
-		    map_num: $("#map_num").val(),
-		    r_time: $("#r_time").val(),
-			signal: $("#signal").val(),
-			help_rt: $("#help_rt").val(),
-			rec_path: $("#rec_path").val(),
-		    rec_score: $("#rec_score").val()
+			// username: $("#username").val(),
+		    // map_num: $("#map_num").val(),
+		    // r_time: $("#r_time").val(),
+			// signal: $("#signal").val(),
+			// help_rt: $("#help_rt").val(),
+			// rec_path: $("#rec_path").val(),
+		    // rec_score: $("#rec_score").val()
+
+            username: "hi",
+		    map_num: "map",
+		    config: "config",
+			signal: "blo",
+			conf_rating: "lee",
+			attention_rt: "4",
 		};
 		
+        
 		$.post(
-			$('#data_container').attr('action'),
+            $('#data_container').attr('action'),
 			formData,
 			function(result){
 				// do something with the response if needed
