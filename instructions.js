@@ -385,7 +385,7 @@ $(document).ready(function() {
 			// rec_path: $("#rec_path").val(),
 		    // rec_score: $("#rec_score").val()
 
-            // username: "hi",
+            // username: "hello",
 		    map_num: "map",
 		    config: "config",
 			signal: "blo",
