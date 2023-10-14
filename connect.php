@@ -16,7 +16,7 @@ $con=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
 
 if($con){
     // echo "connection successful!";
-    $sql="INSERT INTO `user_response`(username,map_num,config,point_to,conf_rating)VALUES('$username','$map_num','$config','$point_to','$conf_rating')";
+    $sql="INSERT INTO `user_responses`(username,map_num,config,point_to,conf_rating)VALUES('$username','$map_num','$config','$point_to','$conf_rating')";
     $result=mysqli_query($con,$sql);
 }else{
     die(mysqli_error($con));
