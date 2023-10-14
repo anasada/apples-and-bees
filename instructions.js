@@ -376,22 +376,22 @@ $(document).ready(function() {
         // const form = document.getElementById("data_container")
         // const formData = new FormData(form);  // grab the data inside the form fields
         
-		var formData = {
-			username: $("#username").val(),
-		    map_num: $("#map_num").val(),
-		    config: $("#config").val(),
-			signal: $("#point_to").val(),
-			conf_rating: $("#conf_rating").val()
-		};
+	var formData = {
+		username: $("#username").val(),
+		map_num: $("#map_num").val(),
+		config: $("#config").val(),
+		signal: $("#point_to").val(),
+		conf_rating: $("#conf_rating").val()
+	};
         
-		$.post(
-            $('#data_container').attr('action'),
-			formData,
-			function(result){
-				// do something with the response if needed
-				// $('#result').html(result);
-			}
-		);
+	$.post(
+        	$('#data_container').attr('action'),
+		formData,
+		function(result){
+			// do something with the response if needed
+			// $('#result').html(result);
+		}
+	);
     });
     // sanity_check_options["subj"] = subj;
     // trial_options["subj"] = subj;
