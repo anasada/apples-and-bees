@@ -377,7 +377,7 @@ $(document).ready(function() {
         // const formData = new FormData(form);  // grab the data inside the form fields
         
 		var formData = {
-			// username: $("#username").val(),
+			username: $("#username").val(),
 		    // map_num: $("#map_num").val(),
 		    // r_time: $("#r_time").val(),
 			// signal: $("#signal").val(),
@@ -385,7 +385,7 @@ $(document).ready(function() {
 			// rec_path: $("#rec_path").val(),
 		    // rec_score: $("#rec_score").val()
 
-            username: "hi",
+            // username: "hi",
 		    map_num: "map",
 		    config: "config",
 			signal: "blo",
