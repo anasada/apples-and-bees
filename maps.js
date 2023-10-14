@@ -149,7 +149,9 @@ function generateMap(){
 	var mapNumber   = trials[counter][0]; // a number from 1-7
 	var itemsConfig = trials[counter][1]; // an array of 2 ones and 1 two
 
-	// trialsData[counter]; //delete later (but what it is)
+	// Add to dataset
+	document.getElementById("map_num").value = mapNumber;
+	document.getElementById("config").value = itemsConfig;
 
 	// Clear canvas each time gen map 
 	ctx.clearRect(0, 0, w, w); 
@@ -1252,8 +1254,12 @@ function postConfirm(){
 		if(confSelected[i].checked) {
 
 			selectedRating = confSelected[i].value; // value of the button that was checked 
-			allRatings[counter] = selectedRating;  // store
+			allRatings[counter] = selectedRating;  // store (useless now)
 
+			// Save in database
+			document.getElementById("conf_rating").value = selectedRating;
+
+			// Push to database
 			$("#data_container").submit()
 
 			wasFilled = 1; // allowed to continue now
@@ -1310,6 +1316,7 @@ function postConfirm(){
 var selectData = new Array(); 
 function recordSelections(p){ 
 	selectData.push(p);
+	document.getElementById("point_to").value = p;
 }
 
 
@@ -1915,4 +1922,3 @@ function namingFunc(){
 function startBlock2(){
 	block = 2; 
 }
-
