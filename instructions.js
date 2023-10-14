@@ -377,22 +377,12 @@ $(document).ready(function() {
         // const formData = new FormData(form);  // grab the data inside the form fields
         
 		var formData = {
-			//username: $("#username").val(),
-		    // map_num: $("#map_num").val(),
-		    // r_time: $("#r_time").val(),
-			// signal: $("#signal").val(),
-			// help_rt: $("#help_rt").val(),
-			// rec_path: $("#rec_path").val(),
-		    // rec_score: $("#rec_score").val()
-
-             username: "hello",
-		    map_num: "map",
-		    config: "config",
-			signal: "blo",
-			conf_rating: "lee",
-			attention_rt: "4",
+			username: $("#username").val(),
+		    map_num: $("#map_num").val(),
+		    config: $("#config").val(),
+			signal: $("#point_to").val(),
+			conf_rating: $("#conf_rating").val()
 		};
-		
         
 		$.post(
             $('#data_container').attr('action'),
