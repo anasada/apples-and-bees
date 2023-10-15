@@ -2,7 +2,7 @@
 
 // http://127.0.0.1/phpmyadmin
 
-$username=$_POST['test'];
+$username=$_POST['username'];
 $map_num=$_POST['map_num'];
 $config=$_POST['config'];
 $point_to=$_POST['signal'];
